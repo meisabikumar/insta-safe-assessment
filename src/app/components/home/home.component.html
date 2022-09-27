@@ -1,6 +1,5 @@
-<p>home works!</p>
 
-<pre><p>{{form.value | json}}</p></pre>
+<!-- <pre><p>{{form.value | json}}</p></pre> -->
 
 <div class="row justify-content-center">
   <div class="col-md-4">
@@ -77,6 +76,31 @@
           >
         </mat-form-field>
       </div>
+
+      <hr />
+      <div class="d-flex tw-justify-center mt-4">
+        <button
+          (click)="submit()"
+          class="tw-bg-[#3a3f9a] tw-rounded-md tw-text-white text-center px-4 py-3"
+        >
+          Submit
+        </button>
+      </div>
     </form>
   </div>
 </div>
+
+<!-- <pre>{{ user_list | json }}</pre> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-3 p-3" *ngFor="let user of user_list">
+      <app-user-card
+        [user]="user"
+        (deleteEvent)="deleteUser($event)"
+      ></app-user-card>
+    </div>
+  </div>
+</div>
+
+<!-- https://i.pravatar.cc/300 -->

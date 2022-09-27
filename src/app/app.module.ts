@@ -8,11 +8,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialExampleModule } from '../material.module';
+import { ToastrModule } from 'ngx-toastr';
+import { UserCardComponent } from './components/user-card/user-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    UserCardComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +24,8 @@ import { MaterialExampleModule } from '../material.module';
     BrowserAnimationsModule,
     MaterialExampleModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
