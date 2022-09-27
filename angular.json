@@ -27,6 +27,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -102,5 +103,7 @@
       }
     }
   },
-  "defaultProject": "instasafe"
+  "cli": {
+    "analytics": "dfe8d559-952a-4fd7-9809-68cc1c0314b3"
+  }
 }
