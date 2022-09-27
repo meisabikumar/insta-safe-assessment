@@ -1,1 +1,82 @@
 <p>home works!</p>
+
+<pre><p>{{form.value | json}}</p></pre>
+
+<div class="row justify-content-center">
+  <div class="col-md-4">
+    <form [formGroup]="form" novalidate>
+      <div>
+        <mat-form-field class="w-100" appearance="outline">
+          <mat-label>Name</mat-label>
+          <input
+            type="text"
+            name="name"
+            matInput
+            placeholder="Name"
+            formControlName="name"
+          />
+
+          <mat-error *ngIf="f['name'].errors && f['name'].errors['required']"
+            >Required</mat-error
+          >
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="w-100" appearance="outline">
+          <mat-label>Email</mat-label>
+          <input
+            type="text"
+            name="email"
+            matInput
+            placeholder="Email"
+            formControlName="email"
+          />
+
+          <mat-error *ngIf="f['email'].errors && f['email'].errors['required']"
+            >Required</mat-error
+          >
+          <mat-error *ngIf="f['email'].errors && f['email'].errors['email']"
+            >Invalid email</mat-error
+          >
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="w-100" appearance="outline">
+          <mat-label>Mobile</mat-label>
+          <input
+            type="text"
+            name="mobile"
+            matInput
+            placeholder="Mobile"
+            formControlName="mobile"
+          />
+
+          <mat-error
+            *ngIf="f['mobile'].errors && f['mobile'].errors['required']"
+            >Required</mat-error
+          >
+          <mat-error *ngIf="f['mobile'].errors && f['mobile'].errors['pattern']"
+            >Invalid mobile no.</mat-error
+          >
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="w-100" appearance="outline">
+          <mat-label>Address</mat-label>
+          <input
+            type="text"
+            name="address"
+            matInput
+            placeholder="Address"
+            formControlName="address"
+          />
+
+          <mat-error
+            *ngIf="f['address'].errors && f['address'].errors['required']"
+            >Required</mat-error
+          >
+        </mat-form-field>
+      </div>
+    </form>
+  </div>
+</div>
